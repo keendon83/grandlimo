@@ -8,23 +8,32 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ['v0.blob.com', 'hebbkx1anhila5yf.public.blob.vercel-storage.com'],
+    domains: [
+      'blob.v0.dev',
+      'images.unsplash.com',
+      'plus.unsplash.com'
+    ],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'v0.blob.com',
+        hostname: 'blob.v0.dev',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com',
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
       },
-    ],
-  },
-  transpilePackages: ['framer-motion'],
-};
+      {
+        protocol: 'https',
+        hostname: 'plus.unsplash.com',
+        port: '',
+        pathname: '/**',
+      }
+    ]
+  }
+}
 
-export default nextConfig;
+export default nextConfig
